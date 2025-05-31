@@ -12,9 +12,12 @@
         }
 
         form {
-            max-width: 460px;
-            margin: 20px auto;
-            padding: 20px;
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            
         }
     </style>
 </head>
