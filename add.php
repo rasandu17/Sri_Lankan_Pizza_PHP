@@ -31,6 +31,13 @@ if (isset($_POST['submit'])) {
             $errors['ingredients'] = 'Ingredients must be sperated by comma';
         }
     }
+
+    if (array_filter($errors)) {
+        // echo 'There are errors in the form';
+    } else {
+        // echo 'There are no errors';
+        header('Location: index.php');
+    }
 }
 
 ?>
