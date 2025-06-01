@@ -1,10 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "rukiee", "pizza123", "pizza_shop");
-
-if (!$conn) {
-    echo 'Connection error' . mysqli_connect_error();
-}
+include('config/db_connect.php');
 
 $sql = 'SELECT title,ingredients,id FROM pizzas ORDER BY created_at';
 $result = mysqli_query($conn, $sql);
@@ -13,7 +9,7 @@ $pizzas = mysqli_fetch_all($result, MYSQLI_ASSOC);
 mysqli_free_result($result);
 mysqli_close($conn);
 
-//explode(',', $pizzas[0]['ingredients']);
+
 
 ?>
 
@@ -27,7 +23,7 @@ mysqli_close($conn);
 <h4 class="center">Pizzas!!!</h4>
 <div class="container">
     <div class="row">
-        <?php foreach ($pizzas as $pizza) { ?>
+        <?php foreach ($pizzas as $pizza) : ?>
 
             <div class="col s6 md3">
                 <div class="card z-depth-0">
@@ -35,9 +31,9 @@ mysqli_close($conn);
                         <h6><?php echo htmlspecialchars($pizza['title']) ?></h6>
                         <div>
                             <ul>
-                                <?php foreach (explode(',', $pizza['ingredients']) as $ing) { ?>
+                                <?php foreach (explode(',', $pizza['ingredients']) as $ing) : ?>
                                     <li><?php echo htmlspecialchars($ing) ?></li>
-                                <?php } ?>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>
@@ -46,7 +42,7 @@ mysqli_close($conn);
                     </div>
                 </div>
             </div>
-        <?php } ?>
+        <?php endforeach; ?>
     </div>
 </div>
 
