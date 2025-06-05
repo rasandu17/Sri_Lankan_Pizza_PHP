@@ -47,18 +47,10 @@ Sri Lankan Pizza is a web-based application that allows users to view, add, and 
 ## Screenshots
 
 ### Home Page
-Screenshot 2025-06-05 163946.png
+![Home Page](Screenshot%202025-06-05%20163946.png)
 
 ### Add Pizza
-Screenshot 2025-06-05 164021.png
+![Add Pizza](Screenshot%202025-06-05%20164021.png)
 
 ### Pizza Details
-Screenshot 2025-06-05 164004.png
-
-## Created By
-
-Ravindu Sandumith
-
-## License
-
-© 2025 Sri Lankan Pizza. All rights reserved.
+![Pizza Details](Screenshot%202025-06-05%20164004.png)
